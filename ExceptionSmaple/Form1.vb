@@ -1,5 +1,7 @@
 ﻿Imports MySql.Data.MySqlClient
 Imports Dapper
+Imports log4net
+
 
 Public Class Form1
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
@@ -51,6 +53,15 @@ Public Class Form1
         'Next
 
         connection.Close()
+
+
+        Dim logger = LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType)
+
+        logger.Debug("開発中のデバッグ／トレースに使用する")
+        logger.Info("情報（操作履歴等）")
+        logger.Warn("注意／警告（障害の一歩手前）")
+        logger.Error("システムが停止するまではいかない障害が発生")
+        logger.Fatal("システムが停止する致命的な障害が発生")
 
     End Sub
 End Class
