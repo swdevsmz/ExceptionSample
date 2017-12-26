@@ -112,6 +112,7 @@
     </Compile>
     <Compile Include="dao\TestDao.vb" />
     <Compile Include="logic\TestLogic.vb" />
+    <Compile Include="Program.vb" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Form1.resx">
@@ -149,9 +150,10 @@
     <Content Include="lib\log4net.dll">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Log4net.Config.xml">
+    <Content Include="log4net.xml">
       <Generator>SettingsSingleFileGenerator</Generator>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <LastGenOutput>log4net1.Designer.vb</LastGenOutput>
     </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />

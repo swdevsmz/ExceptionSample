@@ -4,6 +4,9 @@ Imports log4net
 
 
 Public Class Form1
+
+    Public Shared manager As ConnectionManager
+
     Private Sub Button1_Click(sender As Object, e As EventArgs)
 
         For Each value As StatusType In [Enum].GetValues(GetType(StatusType))
@@ -11,7 +14,6 @@ Public Class Form1
             Dim strValue As String = value.ToString()
             Console.WriteLine(strValue & ", " & intValue)
         Next
-
 
     End Sub
 
@@ -31,5 +33,9 @@ Public Class Form1
 
 
         MessageBox.Show(logger.Logger.Repository.Configured)
+    End Sub
+
+    Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        manager = ConnectionManager.GetInstance()
     End Sub
 End Class
