@@ -84,6 +84,8 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="dao\BaseDao.vb" />
+    <Compile Include="dao\ConnectionManager.vb" />
     <Compile Include="datatype\StatusType.vb" />
     <Compile Include="dto\User.vb" />
     <Compile Include="Form1.vb">
@@ -141,10 +143,15 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="lib\Dapper.dll" />
-    <Content Include="lib\log4net.dll" />
+    <Content Include="lib\Dapper.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="lib\log4net.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Log4net.Config.xml">
       <Generator>SettingsSingleFileGenerator</Generator>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />

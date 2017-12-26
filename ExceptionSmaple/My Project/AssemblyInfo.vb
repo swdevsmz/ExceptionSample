@@ -1,6 +1,7 @@
 ﻿Imports System
 Imports System.Reflection
 Imports System.Runtime.InteropServices
+Imports log4net.Config
 
 ' アセンブリに関する一般情報は以下の属性セットをとおして制御されます。
 ' アセンブリに関連付けられている情報を変更するには、
@@ -34,4 +35,4 @@ Imports System.Runtime.InteropServices
 <Assembly: AssemblyVersion("1.0.0.0")>
 <Assembly: AssemblyFileVersion("1.0.0.0")>
 
-<Assembly: log4net.Config.XmlConfigurator(Watch:=True, ConfigFile:="Log4net.Config.xml")>
+<Assembly: log4net.Config.XmlConfigurator(ConfigFile:="Log4net.Config.xml", Watch:=True)>

@@ -1,16 +1,11 @@
 ﻿Public Class TestLogic
 
-    Public Sub run()
+    Public Function FindUser() As List(Of User)
 
         Dim dao As New TestDao
 
-        Try
+        Return dao.FindUser()
 
-            dao.excute()
-        Catch ex As Exception
-            Throw
-        End Try
-
-    End Sub
+    End Function
 
 End Class
