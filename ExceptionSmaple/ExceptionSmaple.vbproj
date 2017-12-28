@@ -150,11 +150,7 @@
     <Content Include="lib\log4net.dll">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="log4net.xml">
-      <Generator>SettingsSingleFileGenerator</Generator>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      <LastGenOutput>log4net1.Designer.vb</LastGenOutput>
-    </Content>
+    <Content Include="log4net.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>
