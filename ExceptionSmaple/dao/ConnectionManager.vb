@@ -26,6 +26,12 @@ Public Class ConnectionManager
         Return _manager
     End Function
 
+    Public ReadOnly Property connection As MySqlConnection
+        Get
+            Return _connection
+        End Get
+    End Property
+
     Public Function Query(Of T)(ByVal sql As String) As List(Of T)
         Return _connection.Query(Of T)(sql, Nothing)
     End Function
